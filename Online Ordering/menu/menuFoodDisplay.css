@@ -1,0 +1,26 @@
+.food {
+    justify-self: stretch;
+    overflow: hidden;
+    border-radius: 1em;
+    background-color:rgb(247, 198, 22);
+    padding-bottom: 1em;
+    margin: 2em;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    padding-left: 0.5em;
+}
+
+.text .icon {
+    width: 2em;
+    padding-left: 0.5em;
+}
+
+.text div {
+    margin-top: 0.6em;
+}

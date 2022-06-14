@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #Crab_Roe_Tofu { 
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Wanmin_Restaurant_Boiled_Fish {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Chicken_Tofu_Pudding {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Rockin_Riffin_Chicken {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Qingce_Stir_Fry {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <!--Section title-->
+        <div id="pageTitle">
+            Xingling's Recommendation
+        </div>
+
+        <!--Side Navigation Bar-->
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../menu/menu.html"><div><li>Special Offer</li></div></a>
+                <a href="../menu/mainDish.html"><div><li>Main Dishes</li></div></a>
+                <a href="../menu/sideDish.html"><div><li>Side Dishes</li></div></a>
+                <a href="../menu/soup.html"><div><li>Soup</li></div></a>
+                <a href="../menu/dessert.html"><div><li>Dessert</li></div></a>
+                <a href="../menu/beverage.html"><div><li>Beverage</li></div></a>
+            </ul>
+        </div>
+
+        <!--Food-->
+        <div class="food" id="Wanmin_Restaurant_Boiled_Fish">
+            <a href="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp">
+                <img class="image" src="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp" alt="Image of Wanmin Restaurant Boiled Fish">
+                <div class="title">
+                    <h3>Wanmin Restaurant Boiled Fish</h3>
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>5500 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Crab_Roe_Tofu">
+            <a href="../menu/foodImage/Item_Crab_Roe_Tofu.webp">
+                <img class="image" src="../menu/foodImage/Item_Crab_Roe_Tofu.webp" alt="Image of CrabRoe Tofu">
+                <h3 class="title">
+                    Crab Roe Tofu 
+                    <p>&nbsp;</p> 
+                </h3>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>3000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="food" id="Chicken_Tofu_Pudding">
+            <a href="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp">
+                <img class="image" src="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp" alt="Image of Chicken Tofu Pudding">
+                <div>
+                    <h3 class="title">
+                        Chicken Tofu Pudding
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>6000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="food" id="Rockin_Riffin_Chicken">
+            <a href="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp">
+                <img class="image" src="../menu/foodImage/Item_Rockin_Riffin_Chicken.webp" alt="Image of Rockin Riffin Chicken">
+                <div>
+                    <h3 class="title">
+                        Rockin Riffin Chicken
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>4000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Qingce_Stir_Fry">
+            <a href="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp">
+                <img class="image" src="../menu/foodImage/Item_Qingce_Stir_Fry.webp" alt="Image of Qingce Stir Fry">
+                <div>
+                    <h3 class="title">
+                        Qingce Stir Fry
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2500 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

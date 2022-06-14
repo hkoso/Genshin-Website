@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #Jade_Parcels {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Crispy_Potato_Shrimp_Platter{
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Fullmoon_Egg {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Crystal_Shrimp {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Mint_Salad {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    #Mora_Meat {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+    }
+
+    #Golden_Shrimp_Balls {
+        grid-row: 4 / 5;
+        grid-column: 4 / 5;
+    }
+
+    #Grilled_Tiger_Fish {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+
+    #Fried_Radish_Balls {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <div id="pageTitle">
+            Side Dishes
+        </div>
+
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../menu/menu.html"><div><li>Special Offer</li></div></a>
+                <a href="../menu/mainDish.html"><div><li>Main Dishes</li></div></a>
+                <a href="../menu/sideDish.html"><div><li>Side Dishes</li></div></a>
+                <a href="../menu/soup.html"><div><li>Soup</li></div></a>
+                <a href="../menu/dessert.html"><div><li>Dessert</li></div></a>
+                <a href="../menu/beverage.html"><div><li>Beverage</li></div></a>
+            </ul>
+        </div>
+
+        <div class="food" id="Jade_Parcels">
+            <a href="../menu/foodImage/Item_Jade_Parcels.webp">
+                <img class="image" src="../menu/foodImage/Item_Jade_Parcels.webp" alt="Image of Jade Parcels">
+                <div>
+                    <h3 class="title">
+                        Jade Parcels
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1500 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Crispy_Potato_Shrimp_Platter">
+            <a href="../menu/foodImage/Item_Crispy_Potato_Shrimp_Platter.webp">
+                <img class="image" src="../menu/foodImage/Item_Crispy_Potato_Shrimp_Platter.webp" alt="Image of Crispy Potato Shrimp Platter">
+                <div>
+                    <h3 class="title">
+                        Crispy Potato Shrimp Platter
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1800 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Fullmoon_Egg">
+            <a href="../menu/foodImage/Item_Fullmoon_Egg.webp">
+                <img class="image" src="../menu/foodImage/Item_Fullmoon_Egg.webp" alt="Image of Fullmoon Egg">
+                <div>
+                    <h3 class="title">
+                        Fullmoon Egg
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1500 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Crystal_Shrimp">
+            <a href="../menu/foodImage/Item_Crystal_Shrimp.webp">
+                <img class="image" src="../menu/foodImage/Item_Crystal_Shrimp.webp" alt="Image of Crystal Shrimp">
+                <div>
+                    <h3 class="title">
+                        Crystal Shrimp
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="food" id="Mint_Salad">
+            <a href="../menu/foodImage/Item_Mint_Salad.webp">
+                <img class="image" src="../menu/foodImage/Item_Mint_Salad.webp" alt="Image of Mint Salad">
+                <div>
+                    <h3 class="title">
+                        Mint Salad
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Mora_Meat">
+            <a href="../menu/foodImage/Item_Mora_Meat.webp">
+                <img class="image" src="../menu/foodImage/Item_Mora_Meat.webp" alt="Image of Mora Meat">
+                <div>
+                    <h3 class="title">
+                        Mora Meat
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>500 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="food" id="Golden_Shrimp_Balls">
+            <a href="../menu/foodImage/Item_Golden_Shrimp_Balls.webp">
+                <img class="image" src="../menu/foodImage/Item_Golden_Shrimp_Balls.webp" alt="Image of Golden Shrimp Balls">
+                <div>
+                    <h3 class="title">
+                        Golden Shrimp Balls
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Grilled_Tiger_Fish">
+            <a href="../menu/foodImage/Item_Grilled_Tiger_Fish.webp">
+                <img class="image" src="../menu/foodImage/Item_Grilled_Tiger_Fish.webp" alt="Image of Grilled Tiger Fish">
+                <div>
+                    <h3 class="title">
+                        Grilled Tiger Fish
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>500 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Fried_Radish_Balls">
+            <a href="../menu/foodImage/Item_Fried_Radish_Balls.webp">
+                <img class="image" src="../menu/foodImage/Item_Fried_Radish_Balls.webp" alt="Image of Fried Radish Balls">
+                <div>
+                    <h3 class="title">
+                        Fried Radish Balls
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>600 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+</html>

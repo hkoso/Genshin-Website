@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+
+<link rel="stylesheet" href="../Online Ordering/initial.css">
+<link rel="stylesheet" href="../Online Ordering/mainNaviBar.css">
+<link rel="stylesheet" href="../Online Ordering/footer.css">
+
+<style>
+    
+    h3{
+        margin-left: 0.2em;
+    }
+    
+    img{
+        width: 100%;
+    }
+    
+
+    .text{
+        margin-left: 0.2em;
+    }
+
+    #display{
+        display: grid;
+        grid-template-rows: 6em 30em 3em 20em 3em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:    "header header header"
+                                "content content content"
+                                "title" "title" "title"
+                                "guide1 guide2 guide3"
+                                "footer footer footer";
+    }
+
+
+    #news {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        overflow: hidden;
+    }
+
+    #news img{
+        width: 100%;
+    }
+
+    #news #n1{
+        margin-top: -8em;
+    }
+
+    #title {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin-top: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    #guide1 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        justify-self: stretch;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide1:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #guide2 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide2:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #guide3 {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide3 img{
+        width: 56.2%;
+        margin-left: 18%;
+    }
+
+    #guide3:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    
+</style>
+</head>
+
+<body>
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../Online Ordering/assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../Online Ordering/index.html"><div>Homepage</div></a>
+                <a href="../Online Ordering/menu/menu.html"><div>Menu</div></a>
+                <a href="../Online Ordering/login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <!--Animated Main Navigation Bar-->
+        <div id="news">
+            <div>
+                <a href="../Online Ordering/cheifRecommendation.html">
+                    <img id="n1" src="../Online Ordering/assets/o.jpg" alt="Cheif's recommendation">
+                </a>
+            </div>
+        </div>
+
+        <!--Assistant Navigation Bar-->
+        <div id="title">
+            Other Thing You May Want To Know
+        </div>
+
+        <!--Link to the description of Liyue-->
+        <div id="guide1">
+            <a href="../Online Ordering/aboutLiyue.html">
+                <img src="../Online Ordering/assets/liyue.jpg" alt="Liyue">
+                <h3>
+                Liyue
+                </h3>
+                <div class="text">
+                Explore the greatest harbor city in Teyvat!
+                </div>
+            </a>
+        </div>
+
+        <!--Link to the description of Wanmin Resturant-->
+        <div id="guide2">
+            <a href="../Online Ordering/aboutLiyue.html">
+                <img src="../Online Ordering/assets/map.webp" alt="map">
+                <h3>
+                Location
+                </h3>
+                <div class="text">
+                Find out where is our resturant!
+                </div>
+            </a>
+        </div>
+
+        <!--Link to the Grocery item-->
+        <div id="guide3">
+            <a href="../Online Ordering/grocery/grocery.html">
+                <img src="../Online Ordering/assets/Item_Jueyun_Chili.webp" alt="grocery">
+                <h3>
+                    Grocery
+                </h3>
+                <div class="text">
+                    Explore the Grocery with Liyue Chracteristic!
+                </div>
+            </a>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+</html>

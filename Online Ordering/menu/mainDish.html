@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #Wanmin_Restaurant_Boiled_Fish {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Squirrel_Fish {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Cured_Pork_Dry_Hotpot {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Adeptus_Temptation {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Tianshu_Meat {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    #Dragon_Beard_Noodles {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;   
+    }
+
+    #Come_and_Get_It {
+        grid-row: 4 / 5;
+        grid-column: 4 / 5;
+    }
+
+    #Jueyun_Chili_Chicken {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+
+    #Chili-Mince_Cornbread_Buns {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+
+    #Vegetarian_Abalone {
+        grid-row: 5 / 6;
+        grid-column: 3 / 4;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <div id="pageTitle">
+            Main Dishes
+        </div>
+
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../menu/menu.html"><div><li>Special Offer</li></div></a>
+                <a href="../menu/mainDish.html"><div><li>Main Dishes</li></div></a>
+                <a href="../menu/sideDish.html"><div><li>Side Dishes</li></div></a>
+                <a href="../menu/soup.html"><div><li>Soup</li></div></a>
+                <a href="../menu/dessert.html"><div><li>Dessert</li></div></a>
+                <a href="../menu/beverage.html"><div><li>Beverage</li></div></a>
+            </ul>
+        </div>
+
+        <div class="food" id="Wanmin_Restaurant_Boiled_Fish">
+            <a href="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp">
+                <img class="image" src="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp" alt="Image of Wanmin Restaurant Boiled Fish">
+                <div class="title">
+                    <h3>Wanmin Restaurant Boiled Fish</h3>
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>6000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Squirrel_Fish">
+            <a href="../menu/foodImage/Item_Squirrel_Fish.webp">
+                <img class="image" src="../menu/foodImage/Item_Squirrel_Fish.webp" alt="Image of Squirrel Fish">
+                <div class="title">
+                    <h3>Squirrel Fish</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>4000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Cured_Pork_Dry_Hotpot">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Cured_Pork_Dry_Hotpot.webp" alt="Image of Cured Pork Dry Hotpot">
+                <div class="title">
+                    <h3>Cured Pork Dry Hotpot</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>3000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Adeptus_Temptation">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Adeptus_Temptation.webp" alt="Image of Adeptus Temptation">
+                <div class="title">
+                    <h3>Adeptus Temptation</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>9000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Tianshu_Meat">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Tianshu_Meat.webp" alt="Image of Tianshu Meat">
+                <div class="title">
+                    <h3>Tianshu Meat</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>4000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Dragon_Beard_Noodles">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Dragon_Beard_Noodles.webp" alt="Image of Dragon Beard Noodles">
+                <div class="title">
+                    <h3>Dragon Beard Noodles</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Come_and_Get_It">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Come_and_Get_It.webp" alt="Image of Come and Get It">
+                <div class="title">
+                    <h3>Come and Get It</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Jueyun_Chili_Chicken">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Jueyun_Chili_Chicken.webp" alt="Image of Jueyun Chili Chicken">
+                <div class="title">
+                    <h3>Jueyun Chili Chicken</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2500 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Chili-Mince_Cornbread_Buns">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Chili-Mince_Cornbread_Buns.webp" alt="Image of Chili-Mince Cornbread Buns">
+                <div class="title">
+                    <h3>Chili-Mince Cornbread Buns</h3>
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2000 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Vegetarian_Abalone">
+            <a href="../menu/foodImage/i">
+                <img class="image" src="../menu/foodImage/Item_Vegetarian_Abalone.webp" alt="Image of Vegetarian Abalone">
+                <div class="title">
+                    <h3>Vegetarian Abalone</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2500 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+</body>
+
+</html>

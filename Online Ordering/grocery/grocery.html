@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+<link rel="stylesheet" href="../footer.css">
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #Jueyun_Chili {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Bamboo_Shoot {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Matsutake {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Crab_Roe { 
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Lotus_Head { 
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+    
+    #Tofu {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <!--Section title-->
+        <div id="pageTitle">
+            Liyue Specialty
+        </div>
+
+        <!--Side Navigation Bar-->
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../grocery/grocery.html"><div><li>Liyue Specialty</li></div></a>
+                <a href="../grocery/fruit.html"><div><li>Fruit</li></div></a>
+                <a href="../grocery/vegetable.html"><div><li>Vegetable</li></div></a>
+                <a href="../grocery/meat.html"><div><li>meat</li></div></a>
+                <a href="../grocery/seafood.html"><div><li>Seafood</li></div></a>
+                <a href="../grocery/other.html"><div><li>Other</li></div></a>
+            </ul>
+        </div>
+
+        <!--Food-->
+        <div class="food" id="Jueyun_Chili">
+            <a href="../grocery/groceryImage/Item_Jueyun_Chili.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Jueyun_Chili.webp" alt="Image of Jueyun Chili">
+                <div>
+                    <h3 class="title">
+                        Jueyun Chili
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1000 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Tofu">
+            <a href="../grocery/groceryImage/Item_Tofu.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Tofu.webp" alt="Image of Tofu">
+                <div>
+                    <h3 class="title">
+                       Tofu
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>100 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Bamboo_Shoot">
+            <a href="../grocery/groceryImage/Item_Bamboo_Shoot.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Bamboo_Shoot.webp" alt="Image of Bamboo Shoot">
+                <div>
+                    <h3 class="title">
+                        Bamboo Shoot
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>240 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Matsutake">
+            <a href="../grocery/groceryImage/Item_Matsutake.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Matsutake.webp" alt="Image of Matsutake">
+                <div>
+                    <h3 class="title">
+                        Matsutake
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>300 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="food" id="Matsutake">
+            <a href="../grocery/groceryImage/Item_Matsutake.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Matsutake.webp" alt="Image of Matsutake">
+                <div>
+                    <h3 class="title">
+                        Matsutake
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>300 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>        
+
+        <div class="food" id="Crab_Roe">
+            <a href="../grocery/groceryImage/Item_Crab_Roe.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Crab_Roe.webp" alt="Image of Crab Roe">
+                <div>
+                    <h3 class="title">
+                        Crab Roe
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1100 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="food" id="Lotus_Head">
+            <a href="../grocery/groceryImage/Item_Lotus_Head.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Lotus_Head.webp" alt="Image of Lotus Head">
+                <div>
+                    <h3 class="title">
+                        Lotus Head
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>300 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

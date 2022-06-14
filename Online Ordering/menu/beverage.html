@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "footer footer footer footer";
+    }
+
+    #Pops_Teas {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Water {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <div id="pageTitle">
+            Beverage
+        </div>
+
+        <!--Menu Navigation-->
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../menu/menu.html"><div><li>Special Offer</li></div></a>
+                <a href="../menu/mainDish.html"><div><li>Main Dishes</li></div></a>
+                <a href="../menu/sideDish.html"><div><li>Side Dishes</li></div></a>
+                <a href="../menu/soup.html"><div><li>Soup</li></div></a>
+                <a href="../menu/dessert.html"><div><li>Dessert</li></div></a>
+                <a href="../menu/beverage.html"><div><li>Beverage</li></div></a>
+            </ul>
+        </div>
+
+        <!--Dish Menu-->
+        <div class="food" id="Pops_Teas">
+            <a href="../menu/foodImage/Item_Pops_Teas.webp">
+                <img class="image" src="../menu/foodImage/Item_Pops_Teas.webp" alt="Image of Pop's Teas">
+                <div class="title">
+                    <h3>Pop's Teas</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>200 Mora</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Water">
+            <a href="../menu/foodImage/Item_Water.webp">
+                <img class="image" src="../menu/foodImage/Item_Water.webp" alt="Image of Water">
+                <div class="title">
+                    <h3>Water</h3>
+                    <p>&nbsp;</p> 
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>Free</div>
+                </div>
+            </a>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+</html>

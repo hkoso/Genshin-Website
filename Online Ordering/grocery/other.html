@@ -1,0 +1,177 @@
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<link rel="stylesheet" href="../initial.css">
+<link rel="stylesheet" href="../mainNaviBar.css">
+<link rel="stylesheet" href="../pageTitle.css">
+<link rel="stylesheet" href="../menuDescription.css">
+<link rel="stylesheet" href="../menu/menuFoodDisplay.css">
+<link rel="stylesheet" href="../footer.css">
+
+<style>
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #Rice {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Flour {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Salt {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Pepper {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Sugar {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+
+
+</style>
+</head>
+
+<body>
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="../assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="../index.html"><div>Homepage</div></a>
+                <a href="../menu/menu.html"><div>Menu</div></a>
+                <a href="../login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <!--Section title-->
+        <div id="pageTitle">
+            Other
+        </div>
+
+        <!--Side Navigation Bar-->
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../grocery/grocery.html"><div><li>Special Offer</li></div></a>
+                <a href="../grocery/fruit.html"><div><li>Fruit</li></div></a>
+                <a href="../grocery/vegetable.html"><div><li>Vegetable</li></div></a>
+                <a href="../grocery/meat.html"><div><li>Meat</li></div></a>
+                <a href="../grocery/seafood.html"><div><li>Seafood</li></div></a>
+                <a href="../grocery/other.html"><div><li>Other</li></div></a>
+            </ul>
+        </div>
+
+        <!--Food-->
+        <div class="food" id="Rice">
+            <a href="../grocery/groceryImage/Item_Rice.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Rice.webp" alt="Image of Rice">
+                <div>
+                    <h3 class="title">
+                       Rice
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>100 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Flour">
+            <a href="../grocery/groceryImage/Item_Flour.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Flour.webp" alt="Image of Flour">
+                <div>
+                    <h3 class="title">
+                       Flour
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>150 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Salt">
+            <a href="../grocery/groceryImage/Item_Salt.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Salt.webp" alt="Image of Salt">
+                <div>
+                    <h3 class="title">
+                       Salt
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>60 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Pepper">
+            <a href="../grocery/groceryImage/Item_Pepper.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Pepper.webp" alt="Image of Pepper">
+                <div>
+                    <h3 class="title">
+                       Pepper
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>80 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="food" id="Sugar">
+            <a href="../grocery/groceryImage/Item_Sugar.webp">
+                <img class="image" src="../grocery/groceryImage/Item_Sugar.webp" alt="Image of Sugar">
+                <div>
+                    <h3 class="title">
+                       Sugar
+                        <p>&nbsp;</p> 
+                    </h3>
+                    <div class="text">
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>200 Mora</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+        
+    </div>
+</body>
+
+</html>
