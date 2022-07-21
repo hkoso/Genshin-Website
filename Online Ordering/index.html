@@ -39,6 +39,10 @@
     #news {
         grid-row: 2 / 3;
         grid-column: 1 / -1;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
         overflow: hidden;
     }
 
@@ -46,8 +50,64 @@
         width: 100%;
     }
 
-    #news #n1{
-        margin-top: -8em;
+    #news2 #n2 {
+    }
+
+    #news1 {
+        position: absolute;
+        z-index: 30;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        
+    }
+    #news2 {
+        position: absolute;
+        z-index: 20;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        top: -3em;
+        
+    }
+    #news3 {
+        position: absolute;
+        z-index: 10;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        top: -8em;
+    }
+
+    #news #left{
+        position: absolute;
+        z-index: 1000;
+        grid-row: 1 / -1;
+        grid-column: 1 / 2;
+        left: 0em;
+    }
+
+    #news #right {
+        position: absolute;
+        z-index: 1000;
+        grid-row: 1 / -1;
+        grid-column: -2 / -1;
+        right: 0;
+    }
+
+    .banner_button {
+        font-size: 4em;
+        height: 100%;
+        border: 3em;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .banner_button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .banner_button:active {
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     #title {
@@ -109,6 +169,69 @@
 
     
 </style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>    
+    
+    
+    let cur_page = 999;
+
+    $(document).ready(function() {
+        
+        $("#left").click(function() {
+            
+            if(cur_page % 3 == 0){
+                $("#news1").css("z-index", "10");
+                $("#news2").css("z-index", "20");
+                $("#news3").css("z-index", "30");
+            }
+                
+            else if(cur_page % 3 == 2){
+                $("#news1").css("z-index", "20");
+                $("#news2").css("z-index", "30");
+                $("#news3").css("z-index", "10");
+            }
+
+            else {
+                $("#news1").css("z-index", "30");
+                $("#news2").css("z-index", "10");
+                $("#news3").css("z-index", "20");
+            }
+            cur_page = cur_page - 1;
+            
+        });
+    });
+
+
+    $(document).ready(function() {
+        
+        $("#right").click(function() {
+            
+            if(cur_page % 3 == 0){
+                $("#news1").css("z-index", "20");
+                $("#news2").css("z-index", "30");
+                $("#news3").css("z-index", "10");
+            }
+            
+            else if(cur_page % 3 == 1){
+                $("#news1").css("z-index", "10");
+                $("#news2").css("z-index", "20");
+                $("#news3").css("z-index", "30");
+            }
+
+            else {
+                $("#news1").css("z-index", "30");
+                $("#news2").css("z-index", "20");
+                $("#news3").css("z-index", "10");
+            }
+            cur_page = cur_page + 1;
+            
+        });
+    });
+
+</script>
 </head>
 
 <body>
@@ -131,11 +254,19 @@
 
         <!--Animated Main Navigation Bar-->
         <div id="news">
-            <div>
+            <button class="banner_button" id="left"> < </button>
+            <div id="news1">
                 <a href="../Online Ordering/cheifRecommendation.html">
-                    <img id="n1" src="../Online Ordering/assets/o.jpg" alt="Cheif's recommendation">
+                    <img id="n1" src="../Online Ordering/assets/news1.jpg" alt="Cheif's recommendation">
                 </a>
             </div>
+            <div id="news2">
+                <img id="n2" src="../Online Ordering/assets/news2.png">
+            </div>
+            <div id="news3">
+                <img id="n3" src="../Online Ordering/assets/news3.jpg">
+            </div>
+            <button class="banner_button" id="right"> > </button>
         </div>
 
         <!--Assistant Navigation Bar-->
