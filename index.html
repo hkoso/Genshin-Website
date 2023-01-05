@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+
+<link rel="stylesheet" href="./initial.css">
+<link rel="stylesheet" href="./mainNaviBar.css">
+<link rel="stylesheet" href="./footer.css">
+
+<style>
+    
+    h3{
+        margin-left: 0.2em;
+    }
+    
+    img{
+        width: 100%;
+    }
+    
+
+    .text{
+        margin-left: 0.2em;
+    }
+
+    #display{
+        display: grid;
+        grid-template-rows: 5em 30em 3em 20em 3em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:    "header header header"
+                                "content content content"
+                                "title" "title" "title"
+                                "guide1 guide2 guide3"
+                                "footer footer footer";
+    }
+
+
+    #news {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #news img{
+        width: 100%;
+    }
+
+    #content1 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 31;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        font-size: 2em;
+    }
+
+    #content1:hover {
+        background-color: rgb(255, 211, 54);
+    }
+
+    #content2 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 21;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        left: 0;
+        font-size: 2em;
+    }
+
+    #content2:hover {
+        background-color: rgb(255, 211, 54);
+    }
+
+    #content3 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 11;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        left: 1em;
+        font-size: 2em;
+    }
+
+    #content3:hover {
+        background-color: rgb(255, 211, 54);
+    }
+
+    #news1 {
+        position: absolute;
+        z-index: 30;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        
+    }
+    #news2 {
+        position: absolute;
+        z-index: 20;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        top: -3em;
+        
+    }
+    #news3 {
+        position: absolute;
+        z-index: 10;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        overflow: hidden;
+        top: -8em;
+    }
+
+    #news #left{
+        position: absolute;
+        z-index: 1000;
+        grid-row: 1 / -1;
+        grid-column: 1 / 2;
+        left: 0em;
+    }
+
+    #news #right {
+        position: absolute;
+        z-index: 1000;
+        grid-row: 1 / -1;
+        grid-column: -2 / -1;
+        right: 0;
+    }
+
+    .banner_button {
+        font-size: 4em;
+        height: 100%;
+        border: 3em;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .banner_button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .banner_button:active {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    #title {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin-top: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    #guide1 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        justify-self: stretch;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide1:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #guide2 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide2:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #guide3 {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 1em;
+    }
+
+    #guide3 img{
+        width: 56.2%;
+        margin-left: 18%;
+    }
+
+    #guide3:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>    
+    
+    
+    let cur_page = 999;
+
+    $(document).ready(function() {
+        
+        $("#left").click(function() {
+            
+            if(cur_page % 3 == 0){
+                $("#news1").css("z-index", "10");
+                $("#content1").css("z-index", "11");
+                $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
+                $("#news3").css("z-index", "30");
+                $("#content3").css("z-index", "31");
+            }
+                
+            else if(cur_page % 3 == 2){
+                $("#news1").css("z-index", "20");
+                $("#content1").css("z-index", "21");
+                $("#news2").css("z-index", "30");
+                $("#content2").css("z-index", "31");
+                $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
+            }
+
+            else {
+                $("#news1").css("z-index", "30");
+                $("#content1").css("z-index", "31");
+                $("#news2").css("z-index", "10");
+                $("#content2").css("z-index", "11");
+                $("#news3").css("z-index", "20");
+                $("#content3").css("z-index", "21");
+            }
+            cur_page = cur_page - 1;
+            
+        });
+    });
+
+
+    $(document).ready(function() {
+        
+        $("#right").click(function() {
+            
+            if(cur_page % 3 == 0){
+                $("#news1").css("z-index", "20");
+                $("#content1").css("z-index", "21");
+                $("#news2").css("z-index", "30");
+                $("#content2").css("z-index", "31");
+                $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
+            }
+            
+            else if(cur_page % 3 == 1){
+                $("#news1").css("z-index", "10");
+                $("#content1").css("z-index", "11");
+                $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
+                $("#news3").css("z-index", "30");
+                $("#content3").css("z-index", "31");
+            }
+
+            else {
+                $("#news1").css("z-index", "30");
+                $("#content1").css("z-index", "31");
+                $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
+                $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
+            }
+            cur_page = cur_page + 1;
+            
+        });
+    });
+
+</script>
+</head>
+
+<body>
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+            <div id="logo">
+                <div>
+                    <img id="logo" src="./assets/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="container">
+                <a href="./index.html"><div>Homepage</div></a>
+                <a href="./menu/menu.html"><div>Menu</div></a>
+                <a href="./login.html"><div>Login</div></a>
+            </div>
+        </div>
+
+        <!--Animated Main Navigation Bar-->
+        <div id="news">
+            <button class="banner_button" id="left"> < </button>
+
+            <div id="news1">
+                <img id="n1" src="./assets/news2.png">
+            </div>
+
+            <a href="./login.html">
+                <div id="content1">
+                    Start Your Order!    
+                </div>
+            </a>
+
+
+            <div id="news2">
+                <a href=".cheifRecommendation.html">
+                    <img id="n2" src="./assets/news1.jpg" alt="Cheif's recommendation">
+                </a>
+            </div>
+            
+            <a href="./site_under_construction.html">
+                <div id="content2">
+                    Find Today's Special!
+                </div>
+            </a>
+
+            <div id="news3">
+                <img id="n3" src="./assets/news3.jpg">
+            </div>
+
+            <a href="./site_under_construction.html">
+                <div id="content3">
+                    About Us    
+                </div>
+            </a>
+
+            <button class="banner_button" id="right"> > </button>
+        </div>
+
+        <!--Assistant Navigation Bar-->
+        <div id="title">
+            Other Things You May Want To Know
+        </div>
+
+        <!--Link to the description of Liyue-->
+        <div id="guide1">
+            <a href="./site_under_construction.html">
+                <img src="./assets/liyue.jpg" alt="Liyue">
+                <h3>
+                Liyue
+                </h3>
+                <div class="text">
+                Explore the greatest harbor city in Teyvat!
+                </div>
+            </a>
+        </div>
+
+        <!--Link to the description of Wanmin Resturant-->
+        <div id="guide2">
+            <a href="./site_under_construction.html">
+                <img src="./assets/map.webp" alt="map">
+                <h3>
+                Location
+                </h3>
+                <div class="text">
+                Find out where is our resturant!
+                </div>
+            </a>
+        </div>
+
+        <!--Link to the Grocery item-->
+        <div id="guide3">
+            <a href="./grocery/grocery.html">
+                <img src="./assets/Item_Jueyun_Chili.webp" alt="grocery">
+                <h3>
+                    Grocery
+                </h3>
+                <div class="text">
+                    Explore the Grocery with Liyue Chracteristic!
+                </div>
+            </a>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+</html>

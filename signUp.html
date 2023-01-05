@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+
+    <style>
+    * {
+        margin: 0em;
+        padding: 0em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a { 
+        text-decoration: none;
+        list-style: none;
+        color: rgb(43, 43, 43);
+    }
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 36em 3em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "blank form blank"
+                                "footer footer footer";
+    }
+
+    #mainBar {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        overflow: hidden;
+    }
+
+    #navi {
+        background-color: rgb(247, 198, 22);
+        overflow: hidden;
+    }
+
+    #navi li {
+        float: left;
+        width: 10em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #navi #logo {
+        width: 8em;
+    }
+
+    #navi #container {
+        display: flex;
+        justify-content: flex-end;    
+    }
+
+    #navi #container div {
+        padding-top: 2em;
+        height: 5em;
+        align-items: center;
+    }
+
+    #navi #container a:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #menus {   
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;   
+        align-items: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        font-size: 1.5em;
+        background-color: rgb(223, 212, 173);
+    }
+
+    #menus li {
+        padding: 1em 2em;
+        width: 6em;
+    }
+
+    #menuBar a {
+        align-items: center;
+    }
+
+    #menuBar {
+        grid-template-rows: 2 / 3;
+        grid-template-columns: 1 / 2;
+    }
+
+    #menuBar a:hover div {
+        background-color: rgb(109, 103, 81);
+    }
+        
+    #footer{
+        grid-row: -2 / -1;
+        grid-column: 1 / -1;
+        background-color: rgb(142, 71, 4);
+        color: rgb(211, 211, 211);
+        padding-top: 1em;
+        text-align: center;
+    }
+
+    #login {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        background-color: rgb(255, 215, 69);
+        border-radius: 1em;
+        margin: 2em;
+
+    }
+
+    #login a {
+        font-size: 1.8em;
+        margin-left: 1.2em;
+    }
+
+    .label1 {
+        margin-top: 2em;
+    }
+
+    .label2 {
+        margin-left: 1em;
+        font-size: 1.3em;
+    }
+
+    #username {
+        width: 90%;
+        height: 2em;
+        margin: 0 1em;
+    }
+
+    #password {
+        width: 90%;
+        height: 2em;
+        margin: 0 1em;
+    }
+
+    #confirmPassword {
+        width: 90%;
+        height: 2em;
+        margin: 0 1em;
+    }
+
+    #submit {
+        height: 4em;
+        width: 80%;
+        margin-left: 1em;
+    }
+
+    form {
+        display: grid;
+        grid-template-rows: 8em 3em 3em 3em 3em 3em 3em 4em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:    "link link"
+                                "label label"
+                                "input input"
+                                "label label"
+                                "input input"
+                                "label label"
+                                "input input"
+                                "blank button";
+    }
+
+    #loginLink {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    #signUpLink{
+        grid-row: 1 / 2;
+        grid-column: 2 / -1;
+    }
+
+    #usernameLabel {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+    }
+
+    #input1 {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+    }
+
+    #passwordLabel {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+    }
+
+    #input2 {
+        grid-row: 5 / 6;
+        grid-column: 1 / -1;
+    }
+
+    
+    #confirmPasswordLabel {
+        grid-row: 6 / 7;
+        grid-column: 1 / -1;
+    }
+
+    #input3 {
+        grid-row: 7 / 8;
+        grid-column: 1 / -1;
+    }
+
+    #submit {
+        grid-row: 8 / -1;
+        grid-column: 2 / 3;
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+    <div id="display">
+
+        <!--Navigation Bar--->
+        <div id="mainBar">
+            <ul id="navi">
+                <li><img id="logo" src="./assets/logo.png" alt="logo"></li>
+                <div id="container">
+                    <a href="./index.html"><div><li>Homepage</li></div></a>
+                    <a href="./menu/menu.html"><div><li>Menu</li></div></a>
+                    <a href="./login.html"><div><li>Login</li></div></a>
+                </div>
+            </ul>
+        </div>
+
+        <div id="login">
+            <form action="./signUp.php" method="POST">
+                <div class="label1" id="loginLink"><a href="./login.html">Log In</a></div>
+                <div class="label1" id="signUpLink"><a href="./signUp.html">Sign Up</a></div>
+                    <div class="label2" id="usernameLabel">User Name</div>
+                    <div id="input1"><input type="text" name="username" id="username"></div>
+                    <div class="label2" id="passwordLabel">Password</div>
+                    <div id="input2"><input type="password" name="password" id="password"></div>
+                    <div class="label2" id="confirmPasswordLabel">Confirm Password</div>
+                    <div id="input3"><input type="password" name="confirmPassword" id="confirmPassword"></div>
+                <input type="submit" value="Sign Up" id="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

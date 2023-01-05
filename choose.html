@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        
+    </title>
+    <meta charset="utf-8">
+    <style>
+
+        * {
+            margin: 0em;
+            padding: 0em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a { 
+            text-decoration: none;
+            list-style: none;
+            color: rgb(43, 43, 43);
+        }
+
+        #display {
+            display: grid;
+            grid-template-rows: 6em 30em 3em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "naviBar naviBar"
+                                 "dish grocery"
+                                 "footer footer";
+        }
+
+        
+        #pageTitle {
+            font-size: 2em;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 1em;
+            margin: 1em;
+            margin-bottom: 0em;
+            padding-left: 0.8em;
+            padding-top: 0.4em;
+            grid-row: 2 / 3;
+            grid-column: 2 / -1;
+            background-color:  rgb(255, 246, 206);
+        }
+
+        #mainBar {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            overflow: hidden;
+        }
+
+        #navi {
+            background-color: rgb(247, 198, 22);
+            overflow: hidden;
+        }
+
+        #navi li {
+            float: left;
+            width: 10em;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        #navi #logo {
+            margin-top: 0.02rem;
+            width: 10em;
+        }
+
+        #navi #container {
+            display: flex;
+            justify-content: flex-end;    
+        }
+
+        #navi #container div {
+            padding-top: 2em;
+            height: 5em;
+            align-items: center;
+        }
+
+        #navi #container a:hover {
+            background-color: rgb(211, 162, 15);
+        }
+
+        a:hover #dish {
+            background-color: rgb(211, 162, 15);
+        }
+
+        a:hover #grocery {
+            background-color: rgb(211, 162, 15);
+        }
+        
+        #dish {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            overflow: hidden;
+            border-radius: 1em;
+            background-color:rgb(247, 198, 22);
+            margin: 2em 8em;
+            padding-bottom: 6em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+
+        #grocery {
+            grid-row: 2 / 3;
+            grid-column: -2 / -1;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            border-radius: 1em;
+            background-color:rgb(247, 198, 22);
+            margin: 2em 8em;
+            padding-bottom: 6em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+
+        img {
+            margin-left: 3em;
+            margin-top: -1em;
+        }
+
+        h3 {
+            margin: 1em;
+        }
+
+        .text {
+            margin-left: 1.3em;
+        }
+                                                 
+        #footer{
+            grid-row: -2 / -1;
+            grid-column: 1 / -1;
+            background-color: rgb(142, 71, 4);
+            color: rgb(211, 211, 211);
+            padding-top: 1em;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="display">
+
+        <div id="mainBar">
+            <ul id="navi">
+                <li><img id="logo" src="./assets/logo.png" alt="logo"></li>
+                <div id="container">
+                    <a href="./currentOrders.php"><div><li>Your Orders</li></div></a>
+                    <a href="./choose.html"><div><li>Order Now</li></div></a>
+                    <a href="./logOut.php"><div><li>Log Out</li></div></a>
+                </div>
+            </ul>
+        </div>
+
+        <a href="./order/mainDishOrder.html">
+            <div id="dish">
+                <div id="detail">
+                    <img src="./menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp" alt="Dish">
+                    <h3>Dish</h3>
+                    <div class="text">
+                        Find out What You Want to Eat Today!
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="./order/liyueSpecialtyOrder.html">
+            <div id="grocery">
+                <div id="detail">
+                    <img src="./assets/Item_Jueyun_Chili.webp" alt="grocery">
+                    <h3>Grocery</h3>
+                    <div class="text">
+                        Buy Grocery with Liyue Chracteristic Today!
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
