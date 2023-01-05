@@ -171,27 +171,29 @@
         text-align: center;
     }
 
-    #Crab_Roe_Tofu { 
-        grid-row: 3 / 4;
-        grid-column: 3 / 4;
-    }
-
-    #Wanmin_Restaurant_Boiled_Fish {
+    #Rice {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
     }
 
-    #Chicken_Tofu_Pudding {
+
+    #Flour { 
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+
+    #Salt {
         grid-row: 3 / 4;
         grid-column: 4 / 5;
     }
 
-    #Rockin_Riffin_Chicken {
+    #Pepper {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
     }
 
-    #Qingce_Stir_Fry {
+    #Sugar {
         grid-row: 4 / 5;
         grid-column: 2 / 3;
     }
@@ -216,114 +218,115 @@
         </div>
 
         <div id="pageTitle">
-            Xingling's Recommendation
+            Other
         </div>
 
         <div id="menuBar">
             <ul id="menus">
-                <a href="./cart.php"><div><li>Cart</li></div></a>
-                <a href="./specialOrder.html"><div><li>Special Offer</li></div></a>
-                <a href="./mainDishOrder.html"><div><li>Main Dishes</li></div></a>
-                <a href="./sideDishOrder.html"><div><li>Side Dishes</li></div></a>
-                <a href="./soupOrder.html"><div><li>Soup</li></div></a>
-                <a href="./dessertOrder.html"><div><li>Dessert</li></div></a>
-                <a href="./beverageOrder.html"><div><li>Beverage</li></div></a>
+                <a href="../order/cart.php"><div><li>Cart</li></div></a>
+                <a href="../order/liyueSpecialtyOrder.html"><div><li>Liyue Specialty</li></div></a>
+                <a href="../order/fruitOrder.html"><div><li>Fruit</li></div></a>
+                <a href="../order/vegetableOrder.html"><div><li>Vegetable</li></div></a>
+                <a href="../order/meatOrder.html"><div><li>Meat</li></div></a>
+                <a href="../order/seafoodOrder.html"><div><li>Seafood</li></div></a>
+                <a href="../order/otherOrder.html"><div><li>Other</li></div></a>
             </ul>
         </div>
 
         
-        <div class="food" id="Wanmin_Restaurant_Boiled_Fish">
-                <img class="image" src="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp" alt="Image of Wanmin Restaurant Boiled Fish">
-                <div class="title">
-                    <h3>Wanmin Restaurant Boiled Fish</h3>
-                </div>
+        <div class="food" id="Rice">
+                <img class="image" src="../grocery/groceryImage/Item_Rice.webp" alt="Image of Rice">
+                <h3 class="title">
+                    Rice
+                    <p>&nbsp;</p> 
+                </h3>
                 <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>5500 Mora</div>
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>100 Mora</div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Wanmin_Restaurant_Boiled_Fish">
-                        <input type="hidden" value="Wanmin_Restaurant_Boiled_Fish" name="dish_name">
+                        <input type="number" min="1" value=1 name="Rice">
+                        <input type="hidden" value="Rice" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
-        <div class="food" id="Crab_Roe_Tofu">
-                <img class="image" src="../menu/foodImage/Item_Crab_Roe_Tofu.webp" alt="Image of CrabRoe Tofu">
+        <div class="food" id="Flour">
+                <img class="image" src="../grocery/groceryImage/Item_Flour.webp" alt="Image of Flour">
                 <h3 class="title">
-                    Crab Roe Tofu 
+                    Flour 
                     <p>&nbsp;</p> 
                 </h3>
                 <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>3000 Mora</div>
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>150 Mora</div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Crab_Roe_Tofu">
-                        <input type="hidden" value="Crab_Roe_Tofu" name="dish_name">
+                        <input type="number" min="1" value=1 name="Flour">
+                        <input type="hidden" value="Flour" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
         
-        <div class="food" id="Chicken_Tofu_Pudding">
-                <img class="image" src="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp" alt="Image of Chicken Tofu Pudding">
+        <div class="food" id="Salt">
+                <img class="image" src="../grocery/groceryImage/Item_Salt.webp" alt="Image of Salt">
                 <div>
                     <h3 class="title">
-                        Chicken Tofu Pudding
+                        Salt
                         <p>&nbsp;</p> 
                     </h3>
                     <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>6000 Mora</div>
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>60 Mora</div>
                     </div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Chicken_Tofu_Pudding">
-                        <input type="hidden" value="Chicken_Tofu_Pudding" name="dish_name">
+                        <input type="number" min="1" value=1 name="Salt">
+                        <input type="hidden" value="Salt" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
 
-        <div class="food" id="Rockin_Riffin_Chicken">
-                <img class="image" src="../menu/foodImage/Item_Rockin_Riffin_Chicken.webp" alt="Image of Rockin Riffin Chicken">
+        <div class="food" id="Pepper">
+                <img class="image" src="../grocery/groceryImage/Item_Pepper.webp" alt="Image of Pepper">
                 <div>
                     <h3 class="title">
-                        Rockin Riffin Chicken
+                        Pepper
                         <p>&nbsp;</p> 
                     </h3>
                     <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>4000 Mora</div>
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>80 Mora</div>
                     </div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Rockin_Riffin_Chicken">
-                        <input type="hidden" value="Rockin_Riffin_Chicken" name="dish_name">
+                        <input type="number" min="1" value=1 name="Pepper">
+                        <input type="hidden" value="Pepper" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
-        <div class="food" id="Qingce_Stir_Fry">
-                <img class="image" src="../menu/foodImage/Item_Qingce_Stir_Fry.webp" alt="Image of Qingce Stir Fry">
+        <div class="food" id="Sugar">
+                <img class="image" src="../grocery/groceryImage/Item_Sugar.webp" alt="Image of Sugar">
                 <div>
                     <h3 class="title">
-                        Qingce Stir Fry
+                        Sugar
                         <p>&nbsp;</p> 
                     </h3>
                     <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2500 Mora</div>
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>200 Mora</div>
                     </div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Qingce_Stir_Fry">
-                        <input type="hidden" value="Qingce_Stir_Fry" name="dish_name">
+                        <input type="number" min="1" value=1 name="Sugar">
+                        <input type="hidden" value="Sugar" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>

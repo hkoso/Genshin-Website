@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Menu</title>
+
+<style>
+
+    * {
+        margin: 0em;
+        padding: 0em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a { 
+        text-decoration: none;
+        list-style: none;
+        color: rgb(43, 43, 43);
+    }
+
+    #display {
+        display: grid;
+        grid-template-rows: 6em 6em 26em 26em 3em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    "header header header header"
+                                "navigation title title title"
+                                "navigation product product product"
+                                "product product product product"
+                                "footer footer footer footer";
+    }
+
+    #pageTitle {
+        font-size: 2em;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-radius: 1em;
+        margin: 1em;
+        margin-bottom: 0em;
+        padding-left: 0.8em;
+        padding-top: 0.4em;
+        grid-row: 2 / 3;
+        grid-column: 2 / -1;
+        background-color:  rgb(255, 246, 206);
+    }
+
+    #mainBar {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        overflow: hidden;
+    }
+
+    #navi {
+        background-color: rgb(247, 198, 22);
+        overflow: hidden;
+    }
+
+    #navi li {
+        float: left;
+        width: 10em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #navi #logo {
+        width: 10em;
+    }
+
+    #navi #container {
+        display: flex;
+        justify-content: flex-end;    
+    }
+
+    #navi #container div {
+        padding-top: 2em;
+        height: 5em;
+        align-items: center;
+    }
+
+    #navi #container a:hover {
+        background-color: rgb(211, 162, 15);
+    }
+
+    #menus {   
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;   
+        align-items: center;
+        margin: 1em;
+        border-radius: 0.5em;
+        font-size: 1.5em;
+        background-color: rgb(223, 212, 173);
+    }
+
+    #menus li {
+        padding: 1em 2em;
+        width: 6em;
+    }
+
+    #menuBar a {
+        align-items: center;
+    }
+
+    #menuBar {
+        grid-template-rows: 2 / 3;
+        grid-template-columns: 1 / 2;
+    }
+
+    #menuBar a:hover div {
+        background-color: rgb(109, 103, 81);
+    }
+
+    .grocery {
+        justify-self: stretch;
+        overflow: hidden;
+        border-radius: 1em;
+        background-color:rgb(247, 198, 22);
+        padding-bottom: 1em;
+        margin: 2em;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .title {
+        padding-left: 0.5em;
+    }
+
+    .text .icon {
+        width: 2em;
+        padding-left: 0.5em;
+    }
+
+    .text div {
+        margin-top: 0.6em;
+    }
+
+    .order {
+       display: flex;
+       flex-direction: row; 
+    }
+
+    .order {
+        float: right;
+    }
+
+    input[type='number'] {
+        width: 4em;
+        height: 2em;
+        text-decoration: none;
+        border: none;
+    }
+
+    input[type='submit'] {
+        margin-right: 1em;
+        width: 4em;
+        height: 2em;
+        border: none;
+        cursor: pointer;
+    }
+        
+    #footer{
+        grid-row: -2 / -1;
+        grid-column: 1 / -1;
+        background-color: rgb(142, 71, 4);
+        color: rgb(211, 211, 211);
+        padding-top: 1em;
+        text-align: center;
+    }
+
+    #Jueyun_Chili { 
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    #Bamboo_Shoot {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    #Matsutake {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Crab_Roe {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    #Lotus_Head {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+    }
+
+    #Tofu {
+        grid-row: 4 / 5;
+        grid-column: 4 / 5;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div id="display">
+
+        <!--Navigation Bar--->
+        <div id="mainBar">
+            <ul id="navi">
+                <li><img id="logo" src="../assets/logo.png" alt="logo"></li>
+                <div id="container">
+                    <a href="../currentOrders.php"><div><li>Your Orders</li></div></a>
+                    <a href="../choose.html"><div><li>Order Now</li></div></a>
+                    <a href="../logOut.php"><div><li>Log Out</li></div></a>
+                </div>
+            </ul>
+        </div>
+
+        <div id="pageTitle">
+            Liyue's Specialty
+        </div>
+
+        <div id="menuBar">
+            <ul id="menus">
+                <a href="../order/cart.php"><div><li>Cart</li></div></a>
+                <a href="../order/liyueSpecialtyOrder.html"><div><li>Liyue Specialty</li></div></a>
+                <a href="../order/fruitOrder.html"><div><li>Fruit</li></div></a>
+                <a href="../order/vegetableOrder.html"><div><li>Vegetable</li></div></a>
+                <a href="../order/meatOrder.html"><div><li>Meat</li></div></a>
+                <a href="../order/seafoodOrder.html"><div><li>Seafood</li></div></a>
+                <a href="../order/otherOrder.html"><div><li>Other</li></div></a>
+            </ul>
+        </div>
+
+        
+        <div class="grocery" id="Jueyun_Chili">
+                <img class="image" src="../grocery/groceryImage/Item_Jueyun_Chili.webp" alt="Image of Jueyun Chili">
+                <div class="title">
+                    <h3>Jueyun Chili</h3>
+                </div>
+                <div class="text">
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1000 Mora</div>
+                </div>
+                <div class="order">
+                    <form class="add" action="process.php" method="POST">
+                        <input type="number" min="1" value=1 name="Jueyun_Chili">
+                        <input type="hidden" value="Jueyun_Chili" name="dish_name">
+                        <input type="submit" value="Add">
+                    </form>
+                </div>
+        </div>
+
+        <div class="grocery" id="Bamboo_Shoot">
+            <img class="image" src="../grocery/groceryImage/Item_Bamboo_Shoot.webp" alt="Image of Bamboo Shoot">
+            <div class="title">
+                <h3>Bamboo Shoot</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>240 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Bamboo_Shoot">
+                    <input type="hidden" value="Bamboo_Shoot" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+
+        <div class="grocery" id="Matsutake">
+            <img class="image" src="../grocery/groceryImage/Item_Matsutake.webp" alt="Image of Matsutake">
+            <div class="title">
+                <h3>Matsutake</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>300 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Matsutake">
+                    <input type="hidden" value="Matsutake" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+
+        <div class="grocery" id="Crab_Roe">
+            <img class="image" src="../grocery/groceryImage/Item_Crab_Roe.webp" alt="Image of Crab Roe">
+            <div class="title">
+                <h3>Crab Roe</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>1100 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Crab_Roe">
+                    <input type="hidden" value="Crab_Roe" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+
+        <div class="grocery" id="Lotus_Head">
+            <img class="image" src="../grocery/groceryImage/Item_Lotus_Head.webp" alt="Image of Lotus Head">
+            <div class="title">
+                <h3>Lotus Head</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>300 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Lotus_Head">
+                    <input type="hidden" value="Lotus_Head" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+
+        <div class="grocery" id="Tofu">
+            <img class="image" src="../grocery/groceryImage/Item_Tofu.webp" alt="Image of Tofu">
+            <div class="title">
+                <h3>Tofu</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>100 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Tofu">
+                    <input type="hidden" value="Tofu" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+        
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

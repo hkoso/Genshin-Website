@@ -1,5 +1,4 @@
 <?php
-     
      session_start();
      $username = $_SESSION['username'];
 
@@ -19,7 +18,6 @@
             WHERE order_status = -1 AND username = '$username';";
 
     $orderResult = $conn->query($sql);
-    $orderId = $orderResult->fetch_array(MYSQLI_NUM)[0];
 
     if (mysqli_num_rows($orderResult) == 0) { 
         $sql = "INSERT INTO user_order(username, order_status)
@@ -64,6 +62,11 @@
             )";
         $tempResult = $conn->query($sql);
     }
+    else {
+        
+        $orderId = $orderResult->fetch_array(MYSQLI_NUM)[0];
+        
+    }
 
     $_SESSION['currentOrderId'] = $orderId;
 
@@ -87,7 +90,6 @@
     }
 
     $tempResult = $conn->query($sql);
-
-    header("Location: http://localhost/Online%20Ordering/order/cart.php");
+    header("Location: http://localhost:8000/order/cart.php");
 
 ?>

@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <title>Homepage</title>
 
-<link rel="stylesheet" href="../Online Ordering/initial.css">
-<link rel="stylesheet" href="../Online Ordering/mainNaviBar.css">
-<link rel="stylesheet" href="../Online Ordering/footer.css">
+<link rel="stylesheet" href="./initial.css">
+<link rel="stylesheet" href="./mainNaviBar.css">
+<link rel="stylesheet" href="./footer.css">
 
 <style>
     
@@ -26,7 +26,7 @@
 
     #display{
         display: grid;
-        grid-template-rows: 6em 30em 3em 20em 3em;
+        grid-template-rows: 5em 30em 3em 20em 3em;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:    "header header header"
                                 "content content content"
@@ -50,7 +50,51 @@
         width: 100%;
     }
 
-    #news2 #n2 {
+    #content1 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 31;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        font-size: 2em;
+    }
+
+    #content1:hover {
+        background-color: rgb(255, 211, 54);
+    }
+
+    #content2 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 21;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        left: 0;
+        font-size: 2em;
+    }
+
+    #content2:hover {
+        background-color: rgb(255, 211, 54);
+    }
+
+    #content3 {
+        background-color: rgba(247, 198, 22, 0.8);
+        position:absolute;
+        bottom: 0;
+        z-index: 11;
+        padding: 1em;
+        margin: 2em;
+        border-radius: 0.5em;
+        left: 1em;
+        font-size: 2em;
+    }
+
+    #content3:hover {
+        background-color: rgb(255, 211, 54);
     }
 
     #news1 {
@@ -184,20 +228,29 @@
             
             if(cur_page % 3 == 0){
                 $("#news1").css("z-index", "10");
+                $("#content1").css("z-index", "11");
                 $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
                 $("#news3").css("z-index", "30");
+                $("#content3").css("z-index", "31");
             }
                 
             else if(cur_page % 3 == 2){
                 $("#news1").css("z-index", "20");
+                $("#content1").css("z-index", "21");
                 $("#news2").css("z-index", "30");
+                $("#content2").css("z-index", "31");
                 $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
             }
 
             else {
                 $("#news1").css("z-index", "30");
+                $("#content1").css("z-index", "31");
                 $("#news2").css("z-index", "10");
+                $("#content2").css("z-index", "11");
                 $("#news3").css("z-index", "20");
+                $("#content3").css("z-index", "21");
             }
             cur_page = cur_page - 1;
             
@@ -211,20 +264,29 @@
             
             if(cur_page % 3 == 0){
                 $("#news1").css("z-index", "20");
+                $("#content1").css("z-index", "21");
                 $("#news2").css("z-index", "30");
+                $("#content2").css("z-index", "31");
                 $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
             }
             
             else if(cur_page % 3 == 1){
                 $("#news1").css("z-index", "10");
+                $("#content1").css("z-index", "11");
                 $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
                 $("#news3").css("z-index", "30");
+                $("#content3").css("z-index", "31");
             }
 
             else {
                 $("#news1").css("z-index", "30");
+                $("#content1").css("z-index", "31");
                 $("#news2").css("z-index", "20");
+                $("#content2").css("z-index", "21");
                 $("#news3").css("z-index", "10");
+                $("#content3").css("z-index", "11");
             }
             cur_page = cur_page + 1;
             
@@ -242,42 +304,65 @@
         <div id="mainBar">
             <div id="logo">
                 <div>
-                    <img id="logo" src="../Online Ordering/assets/logo.png" alt="logo">
+                    <img id="logo" src="./assets/logo.png" alt="logo">
                 </div>
             </div>
             <div id="container">
-                <a href="../Online Ordering/index.html"><div>Homepage</div></a>
-                <a href="../Online Ordering/menu/menu.html"><div>Menu</div></a>
-                <a href="../Online Ordering/login.html"><div>Login</div></a>
+                <a href="./index.html"><div>Homepage</div></a>
+                <a href="./menu/menu.html"><div>Menu</div></a>
+                <a href="./login.html"><div>Login</div></a>
             </div>
         </div>
 
         <!--Animated Main Navigation Bar-->
         <div id="news">
             <button class="banner_button" id="left"> < </button>
+
             <div id="news1">
-                <a href="../Online Ordering/cheifRecommendation.html">
-                    <img id="n1" src="../Online Ordering/assets/news1.jpg" alt="Cheif's recommendation">
+                <img id="n1" src="./assets/news2.png">
+            </div>
+
+            <a href="./login.html">
+                <div id="content1">
+                    Start Your Order!    
+                </div>
+            </a>
+
+
+            <div id="news2">
+                <a href=".cheifRecommendation.html">
+                    <img id="n2" src="./assets/news1.jpg" alt="Cheif's recommendation">
                 </a>
             </div>
-            <div id="news2">
-                <img id="n2" src="../Online Ordering/assets/news2.png">
-            </div>
+            
+            <a href="./site_under_construction.html">
+                <div id="content2">
+                    Find Today's Special!
+                </div>
+            </a>
+
             <div id="news3">
-                <img id="n3" src="../Online Ordering/assets/news3.jpg">
+                <img id="n3" src="./assets/news3.jpg">
             </div>
+
+            <a href="./site_under_construction.html">
+                <div id="content3">
+                    About Us    
+                </div>
+            </a>
+
             <button class="banner_button" id="right"> > </button>
         </div>
 
         <!--Assistant Navigation Bar-->
         <div id="title">
-            Other Thing You May Want To Know
+            Other Things You May Want To Know
         </div>
 
         <!--Link to the description of Liyue-->
         <div id="guide1">
-            <a href="../Online Ordering/aboutLiyue.html">
-                <img src="../Online Ordering/assets/liyue.jpg" alt="Liyue">
+            <a href="./site_under_construction.html">
+                <img src="./assets/liyue.jpg" alt="Liyue">
                 <h3>
                 Liyue
                 </h3>
@@ -289,8 +374,8 @@
 
         <!--Link to the description of Wanmin Resturant-->
         <div id="guide2">
-            <a href="../Online Ordering/aboutLiyue.html">
-                <img src="../Online Ordering/assets/map.webp" alt="map">
+            <a href="./site_under_construction.html">
+                <img src="./assets/map.webp" alt="map">
                 <h3>
                 Location
                 </h3>
@@ -302,8 +387,8 @@
 
         <!--Link to the Grocery item-->
         <div id="guide3">
-            <a href="../Online Ordering/grocery/grocery.html">
-                <img src="../Online Ordering/assets/Item_Jueyun_Chili.webp" alt="grocery">
+            <a href="./grocery/grocery.html">
+                <img src="./assets/Item_Jueyun_Chili.webp" alt="grocery">
                 <h3>
                     Grocery
                 </h3>

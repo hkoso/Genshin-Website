@@ -4,7 +4,7 @@
         $username = $_SESSION["username"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/401.html");
+        header("Location: http://localhost:8000/401.html");
     }
 ?>
 
@@ -213,11 +213,11 @@
     <div id="display">
         <div id="mainBar">
             <ul id="navi">
-                <li><img id="logo" src="../../Online Ordering/assets/logo.png" alt="logo"></li>
+                <li><img id="logo" src="./assets/logo.png" alt="logo"></li>
                 <div id="container">
-                    <a href="../Online Ordering/currentOrders.php"><div><li>Your Orders</li></div></a>
-                    <a href="../Online Ordering/choose.html"><div><li>Order Now</li></div></a>
-                    <a href="../Online Ordering/logOut.php"><div><li>Log Out</li></div></a>
+                    <a href="./currentOrders.php"><div><li>Your Orders</li></div></a>
+                    <a href="./choose.html"><div><li>Order Now</li></div></a>
+                    <a href="./logOut.php"><div><li>Log Out</li></div></a>
                 </div>
             </ul>
         </div>
@@ -225,7 +225,7 @@
         
         <div id="menuBar">
             <ul id="menus">
-                <a href="../Online Ordering/currentOrders.php"><div><li>Orders</li></div></a>
+                <a href="./currentOrders.php"><div><li>Orders</li></div></a>
             </ul>
         </div>
 
@@ -284,37 +284,41 @@
 
                 echo "<h3>Order ID: " . $orderId . "</h3>"; 
 
-                $sql = "SELECT dish_name
+                $sql = "SELECT dish_name,
+                               quantity
                         FROM order_info
                         WHERE order_id = '$orderId';";
 
                 $dishResult = $conn->query($sql);
                 $dishNum = mysqli_num_rows($dishResult);
+                $total_item = 0;
+                $total_price = 0;
 
-
-                $total = 0;
-                if($dishNum == 1){
-                    echo "<div class='detail'>" . $dishNum . " item</div>";
-                }
-                else {
-                    echo "<div class='detail'>" . $dishNum . " items</div>";
-                }
-
-                for($j = 0; $j < $dishNum; $j++){
+                for($j = 0; $j < $dishNum; $j++) {
                     $dishResult->data_seek($j);
-                    $dishRows = $dishResult->fetch_array(MYSQLI_ASSOC);
-                    $dishName = $dishRows["dish_name"];
-                    
-                    
+                    $cur_item = $dishResult->fetch_assoc();
+                    $total_item += $cur_item['quantity'];
+
+                    $dishName = $cur_item['dish_name'];
                     $sql = "SELECT price
                             FROM dish_info
                             WHERE dish_name = '$dishName';";
+
                     
                     $priceResult = $conn->query($sql);
                     $price = $priceResult->fetch_array(MYSQLI_NUM);
-                    $total += $price[0];
+
+                    $total_price += $cur_item['quantity'] * $price[0];
 
                 }
+
+                if($total_item == 1){
+                    echo "<div class='detail'>" . $total_item . " item</div>";
+                }
+                else {
+                    echo "<div class='detail'>" . $total_item . " items</div>";
+                }
+
 
                 $sql = "SELECT year, month, day, hour, minute, second, meridiem
                         FROM time_info
@@ -328,7 +332,7 @@
                          $times['minute'] . ":" . $times['second'] . " " .
                          $times['meridiem']; 
 
-                echo "          <div class='total'>" . $total . " Mora</div>
+                echo "          <div class='total'>" . $total_price . " Mora</div>
                                 <div class='time'>Order Time: " . $time . "</div>
                                 <div class='button'><input type='submit' value='>' id='submit'>
                             </div>

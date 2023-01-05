@@ -1,13 +1,4 @@
-<html>
-
-<head>
-
-    <title>haha</title>
-
-</head>
-
-<body>
-    <?php
+<?php
 
     require_once 'databaseLoginInfo.php';
     $inputUsername = $_POST['username'];
@@ -32,12 +23,7 @@
         $_SESSION["username"] = $inputUsername;
         $_SESSION["database"] = $db; 
 
-        header("Location: http://localhost/Online%20Ordering/currentOrders.php");
+        header("Location: http://localhost:8000/currentOrders.php");
 
     }
-
-
-    ?>
-
-</body>
-</html>
+?>

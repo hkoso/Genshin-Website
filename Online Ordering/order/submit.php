@@ -5,7 +5,7 @@
         $username = $_SESSION["username"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/401.html");
+        header("Location: http://localhost:8000/401.html");
     }
 
     
@@ -13,7 +13,7 @@
         $orderId = $_SESSION["currentOrderId"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/404.html");
+        header("Location: http://localhost:8000/404.html");
     }
 
     require_once '../databaseLoginInfo.php';
@@ -32,5 +32,5 @@
 
     $_SESSION["currentOrderId"] = null;
     
-    header("Location: http://localhost/Online%20Ordering/200.html");
+    header("Location: http://localhost:8000/200.html");
 ?>

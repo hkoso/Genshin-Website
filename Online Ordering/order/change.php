@@ -4,7 +4,7 @@
         $username = $_SESSION["username"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/401.html");
+        header("Location: http://localhost:8000/401.html");
     }
 
     $orderId = $_SESSION['currentOrderId'];
@@ -32,6 +32,6 @@
 
     $result = $conn->query($sql);
 
-    header("Location: http://localhost/Online%20Ordering/order/cart.php");
+    header("Location: http://localhost:8000/order/cart.php");
 
 ?>

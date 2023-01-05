@@ -23,12 +23,11 @@
 
     #display {
         display: grid;
-        grid-template-rows: 6em 6em 30em 30em 3em;
+        grid-template-rows: 6em 6em 30em 6em 3em;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:    "header header header header"
                                 "navigation title title title"
                                 "navigation product product product"
-                                "product product product product"
                                 "footer footer footer footer";
     }
 
@@ -171,29 +170,19 @@
         text-align: center;
     }
 
-    #Crab_Roe_Tofu { 
+    #Fish { 
         grid-row: 3 / 4;
         grid-column: 3 / 4;
     }
 
-    #Wanmin_Restaurant_Boiled_Fish {
+    #Crab {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
     }
 
-    #Chicken_Tofu_Pudding {
+    #Shrimp_Meat {
         grid-row: 3 / 4;
         grid-column: 4 / 5;
-    }
-
-    #Rockin_Riffin_Chicken {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-    }
-
-    #Qingce_Stir_Fry {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
     }
 
 </style>
@@ -216,118 +205,81 @@
         </div>
 
         <div id="pageTitle">
-            Xingling's Recommendation
+            Seafood
         </div>
 
         <div id="menuBar">
             <ul id="menus">
                 <a href="./cart.php"><div><li>Cart</li></div></a>
-                <a href="./specialOrder.html"><div><li>Special Offer</li></div></a>
-                <a href="./mainDishOrder.html"><div><li>Main Dishes</li></div></a>
-                <a href="./sideDishOrder.html"><div><li>Side Dishes</li></div></a>
-                <a href="./soupOrder.html"><div><li>Soup</li></div></a>
-                <a href="./dessertOrder.html"><div><li>Dessert</li></div></a>
-                <a href="./beverageOrder.html"><div><li>Beverage</li></div></a>
+                <a href="./liyueSpecialtyOrder.html"><div><li>Liyue Specialty</li></div></a>
+                <a href="./fruitOrder.html"><div><li>Fruit</li></div></a>
+                <a href="./vegetableOrder.html"><div><li>Vegetable</li></div></a>
+                <a href="./meatOrder.html"><div><li>Meat</li></div></a>
+                <a href="./seafoodOrder.html"><div><li>Seafood</li></div></a>
+                <a href="./otherOrder.html"><div><li>Other</li></div></a>
             </ul>
         </div>
 
         
-        <div class="food" id="Wanmin_Restaurant_Boiled_Fish">
-                <img class="image" src="../menu/foodImage/Item_Wanmin_Restaurant_Boiled_Fish.webp" alt="Image of Wanmin Restaurant Boiled Fish">
+        <div class="food" id="Crab">
+                <img class="image" src="../grocery/groceryImage/Item_Crab.webp" alt="Image of Crab">
                 <div class="title">
-                    <h3>Wanmin Restaurant Boiled Fish</h3>
+                    <h3 class="title">
+                        Crab
+                        <p>&nbsp;</p> 
+                    </h3>
                 </div>
                 <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>5500 Mora</div>
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>240 Mora</div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Wanmin_Restaurant_Boiled_Fish">
-                        <input type="hidden" value="Wanmin_Restaurant_Boiled_Fish" name="dish_name">
+                        <input type="number" min="1" value=1 name="Crab">
+                        <input type="hidden" value="Crab" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
-        <div class="food" id="Crab_Roe_Tofu">
-                <img class="image" src="../menu/foodImage/Item_Crab_Roe_Tofu.webp" alt="Image of CrabRoe Tofu">
+        <div class="food" id="Fish">
+                <img class="image" src="../grocery/groceryImage/Item_Fish.webp" alt="Image of Fish">
                 <h3 class="title">
-                    Crab Roe Tofu 
+                    Fish
                     <p>&nbsp;</p> 
                 </h3>
                 <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>3000 Mora</div>
+                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>240 Mora</div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Crab_Roe_Tofu">
-                        <input type="hidden" value="Crab_Roe_Tofu" name="dish_name">
+                        <input type="number" min="1" value=1 name="Fish">
+                        <input type="hidden" value="Fish" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
         
-        <div class="food" id="Chicken_Tofu_Pudding">
-                <img class="image" src="../menu/foodImage/Item_Chicken_Tofu_Pudding.webp" alt="Image of Chicken Tofu Pudding">
+        <div class="food" id="Shrimp_Meat">
+                <img class="image" src="../grocery/groceryImage/Item_Shrimp_Meat.webp" alt="Image of Shrimp Meat">
                 <div>
                     <h3 class="title">
-                        Chicken Tofu Pudding
+                        Shrimp Meat
                         <p>&nbsp;</p> 
                     </h3>
                     <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>6000 Mora</div>
+                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>120 Mora</div>
                     </div>
                 </div>
                 <div class="order">
                     <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Chicken_Tofu_Pudding">
-                        <input type="hidden" value="Chicken_Tofu_Pudding" name="dish_name">
+                        <input type="number" min="1" value=1 name="Shrimp_Meat">
+                        <input type="hidden" value="Shrimp_Meat" name="dish_name">
                         <input type="submit" value="Add">
                     </form>
                 </div>
         </div>
 
-
-        <div class="food" id="Rockin_Riffin_Chicken">
-                <img class="image" src="../menu/foodImage/Item_Rockin_Riffin_Chicken.webp" alt="Image of Rockin Riffin Chicken">
-                <div>
-                    <h3 class="title">
-                        Rockin Riffin Chicken
-                        <p>&nbsp;</p> 
-                    </h3>
-                    <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>4000 Mora</div>
-                    </div>
-                </div>
-                <div class="order">
-                    <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Rockin_Riffin_Chicken">
-                        <input type="hidden" value="Rockin_Riffin_Chicken" name="dish_name">
-                        <input type="submit" value="Add">
-                    </form>
-                </div>
-        </div>
-
-        <div class="food" id="Qingce_Stir_Fry">
-                <img class="image" src="../menu/foodImage/Item_Qingce_Stir_Fry.webp" alt="Image of Qingce Stir Fry">
-                <div>
-                    <h3 class="title">
-                        Qingce Stir Fry
-                        <p>&nbsp;</p> 
-                    </h3>
-                    <div class="text">
-                        <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>2500 Mora</div>
-                    </div>
-                </div>
-                <div class="order">
-                    <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Qingce_Stir_Fry">
-                        <input type="hidden" value="Qingce_Stir_Fry" name="dish_name">
-                        <input type="submit" value="Add">
-                    </form>
-                </div>
-        </div>
         
         <div id="footer">
             This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.

@@ -4,7 +4,7 @@
         $username = $_SESSION["username"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/403.html");
+        header("Location: http://localhost:8000/403.html");
     }
 
     $orderId = $_POST['id'];
@@ -177,11 +177,11 @@
     <div id="display">
         <div id="mainBar">
             <ul id="navi">
-                <li><img id="logo" src="../Online Ordering/assets/logo.png" alt="logo"></li>
+                <li><img id="logo" src="./assets/logo.png" alt="logo"></li>
                 <div id="container">
-                <a href="../Online Ordering/currentOrders.php"><div><li>Your Orders</li></div></a>
-                    <a href="../Online Ordering/choose.html"><div><li>Order Now</li></div></a>
-                    <a href="../Online Ordering/logOut.php"><div><li>Log Out</li></div></a>
+                <a href="./currentOrders.php"><div><li>Your Orders</li></div></a>
+                    <a href="./choose.html"><div><li>Order Now</li></div></a>
+                    <a href="./logOut.php"><div><li>Log Out</li></div></a>
                 </div>
             </ul>
         </div>
@@ -189,7 +189,7 @@
         
         <div id="menuBar">
             <ul id="menus">
-                <a href="../Online Ordering/currentOrders.php"><div><li>Back</li></div></a>
+                <a href="./currentOrders.php"><div><li>Back</li></div></a>
             </ul>
         </div>
 

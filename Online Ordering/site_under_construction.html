@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+   
+
+<head>
+    <meta http-equiv="refresh" content="6;url=http://localhost:8000/index.html"/>
+    <title>To be displayed</title>
+
+    <link rel="stylesheet" href="./initial.css">
+    <link rel="stylesheet" href="./mainNaviBar.css">
+    <link rel="stylesheet" href="./footer.css">
+
+
+    <style>
+        #display{
+            display: grid;
+            grid-template-rows: 5em 30.1em 3em;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+
+        #picture {
+               position: absolute;
+               margin: 0;
+               top: 10em;
+               left: 8em;
+               overflow: hidden;
+               height: 20em;
+               border-radius: 1em;
+            }
+
+        #picture img {
+                width: 30em;
+        }
+
+        #info {
+            position: absolute;
+            padding: 3em;
+            top: 13em;
+            left: 40em;
+            overflow: hidden;
+            background-color: rgb(255, 246, 206);
+            border-radius: 1em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="display">
+
+        <!--Top Navigation Bar--->
+        <div id="mainBar">
+
+            <div id="logo">
+                <div>
+                    <img id="logo" src="./assets/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div id="container">
+                <a href="./index.html"><div>Homepage</div></a>
+                <a href="./menu/menu.html"><div>Menu</div></a>
+                <a href="./login.html"><div>Login</div></a>
+            </div>
+
+        </div>
+
+        <div id="picture">
+            <img src="./assets/klee.jpg" alt="klee drawing">
+        </div>
+
+        <div id="info">
+            <h2>Site is under construction</h2>
+            <br>
+            We are sorry. The site you are trying to visit has not yet finished.
+            <br>
+            Klee will do her best to create the content ASAP.
+            <br>
+            <br>
+            You will be redirected to main page shortly
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
+        </div>
+
+    </div>
+</body>
+
+</html>

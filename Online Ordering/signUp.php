@@ -14,7 +14,7 @@
     $conn = new mysqli($url, $un, $pwd, $db);
 
     if($conn -> connect_errno) {
-        die($conn -> connerct_errno);
+        die($conn -> connect_errno);
     }
 
     $username = $_POST['username'];

@@ -4,7 +4,7 @@
         $username = $_SESSION["username"];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/401.html");
+        header("Location: http://localhost:8000/401.html");
     }
 
     
@@ -12,7 +12,7 @@
         $orderId = $_SESSION['currentOrderId'];
     }
     else {
-        header("Location: http://localhost/Online%20Ordering/404.html");
+        header("Location: http://localhost:8000/404.html");
     }
     // need more 
 
@@ -273,11 +273,11 @@
                 displayInfo($orderId); 
             ?>
             <div id="final">
-                <form action="../order/cancel.php" method="POST">
+                <form action="./cancel.php" method="POST">
                     <input type="submit" value="Cancel Order" id="cancel">
                 </form>
 
-                <form action="../order/address.php" method="POST">
+                <form action="./address.php" method="POST">
                     <input type="submit" value="Next" id="next">
                 </form>
             </div>

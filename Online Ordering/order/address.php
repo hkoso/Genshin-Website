@@ -220,10 +220,96 @@
 
         $(document).ready(function() {
             $("#back").click(function() {
-                window.location.href="http://localhost/Online%20Ordering/order/cart.php";
+                window.location.href="http://localhost:8000/order/cart.php";
             });
         });
+
+
+        $(document).ready(function() {
+            let submit = document.getElementById("submit");
+            submit.addEventListener("mouseover", checkIfInfoFilled);
+        });
+
+        function checkIfInfoFilled() {
+
+            let firstName = document.getElementById("firstName");
+            let lastName = document.getElementById("lastName");
+            let suit = document.getElementById("suit");
+            let street = document.getElementById("streetName");
+            let city = document.getElementById("city");
+            let postalCode = document.getElementById("postalCode");
+            let phoneNum = document.getElementById("phone");
+            
+
+            if(document.getElementById("takeOut").checked) {
+                if(firstName.value && lastName.value 
+                && suit.value && street.value && city.value && postalCode.value && phoneNum.value){
+                        
+                    let regex = "[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]";
+
+                    if(!postalCode.value.match(regex)) {
+                        alert("Invalid postal code:\n "+ 
+                        "A postal code need to be in the form like A1A 1A1");
+                    }
+                    
+                    regex = "[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]";
+                    if(!phoneNum.value.match(regex)) {
+                        alert("Invalid phone number:\n "+ 
+                        "A postal code need to be in the form like 123-456-7890");
+                    }
+                }
+                else {
+                    let info = "Unable to proceed due to lack of following infomation: \n";
+                    if(!firstName.value) {
+                        info += "First Name\n";
+                    }
+                    if(!lastName.value) {
+                        info += "Last Name\n";
+                    }
+                    if(!suit.value) {
+                        info += "Suit Number\n";
+                    }
+                    if(!street.value) {
+                        info += "Street Address\n";
+                    }
+                    if(!city.value) {
+                        info += "City Name\n";
+                    }
+                    if(!postalCode.value) {
+                        info += "Postal Code\n";
+                    }
+                    if(!phoneNum.value) {
+                        info += "Phone Number\n";
+                    }
+
+                    alert(info);
+                }
+            }
+            else {
+                if(firstName.value && lastName.value && phoneNum.value){
+                }
+                else {
+                    let info = "Unable to proceed due to lack of following infomation: \n";
+                    if(!firstName.value) {
+                        info += "First Name\n";
+                    }
+                    if(!lastName.value) {
+                        info += "Last Name\n";
+                    }
+                    if(!phoneNum.value) {
+                        info += "Phone Number\n";
+                    }
+
+                    alert(info);
+                }
+            }
+
+
+        }
+
     </script>
+
+
 
 </head>
 
@@ -234,7 +320,7 @@
         <!--Navigation Bar--->
         <div id="mainBar">
             <ul id="navi">
-                <li><img id="logo" src="../../Online Ordering/assets/logo.png" alt="logo"></li>
+                <li><img id="logo" src="../assets/logo.png" alt="logo"></li>
                 <div id="container">
                     <a href="../currentOrders.php"><div><li>Your Orders</li></div></a>
                     <a href="../choose.html"><div><li>Order Now</li></div></a>
@@ -251,7 +337,7 @@
                     <div id="radios">
                         <input type="radio" name="serviceMode" value="0" id="dineIn">
                         <div class="label">Dine in</div>
-                        <input type="radio" name="serviceMode" value="1" id="takeOut">
+                        <input type="radio" name="serviceMode" value="1" id="takeOut" checked>
                         <div class="label">Take out</label></div>
                     </div>
                 </div>
@@ -284,10 +370,10 @@
                 </div>
                 <div id="phoneNum">
                     <div class="label">Phone Number</div>
-                    <input type="tel" name="phoneNum" placeholder="Format: 123-456-7890">
+                    <input type="text" name="phoneNum" placeholder="Format: 123-456-7890" id="phone">
                 </div>
                 <input type="button" id="back" value="back">
-                <input type="submit">
+                <input type="submit" id="submit">
             </form>
         </div>
 

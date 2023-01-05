@@ -23,11 +23,12 @@
 
     #display {
         display: grid;
-        grid-template-rows: 6em 6em 30em 3em;
+        grid-template-rows: 6em 6em 26em 8em 3em;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:    "header header header header"
                                 "navigation title title title"
                                 "navigation product product product"
+                                "product product product product"
                                 "footer footer footer footer";
     }
 
@@ -50,7 +51,7 @@
         overflow: hidden;
     }
 
-    #navi{
+    #navi {
         background-color: rgb(247, 198, 22);
         overflow: hidden;
     }
@@ -110,7 +111,7 @@
         background-color: rgb(109, 103, 81);
     }
 
-    .food {
+    .grocery {
         justify-self: stretch;
         overflow: hidden;
         border-radius: 1em;
@@ -170,14 +171,29 @@
         text-align: center;
     }
 
-    #Pops_Teas {
+    #Berry { 
         grid-row: 3 / 4;
         grid-column: 2 / 3;
     }
 
-    #Water {
+    #Sunsettia {
         grid-row: 3 / 4;
         grid-column: 3 / 4;
+    }
+
+    #Apple {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    #Rockin_Riffin_Chicken {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    #Qingce_Stir_Fry {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
     }
 
 </style>
@@ -185,8 +201,6 @@
 </head>
 
 <body>
-
-
     <div id="display">
 
         <!--Navigation Bar--->
@@ -202,58 +216,73 @@
         </div>
 
         <div id="pageTitle">
-            Beverage
+            Fruit
         </div>
+
         <div id="menuBar">
             <ul id="menus">
                 <a href="../order/cart.php"><div><li>Cart</li></div></a>
-                <a href="../order/specialOrder.html"><div><li>Special Offer</li></div></a>
-                <a href="../order/mainDishOrder.html"><div><li>Main Dishes</li></div></a>
-                <a href="../order/sideDishOrder.html"><div><li>Side Dishes</li></div></a>
-                <a href="../order/soupOrder.html"><div><li>Soup</li></div></a>
-                <a href="../order/dessertOrder.html"><div><li>Dessert</li></div></a>
-                <a href="../order/beverageOrder.html"><div><li>Beverage</li></div></a>
+                <a href="../order/liyueSpecialtyOrder.html"><div><li>Liyue Specialty</li></div></a>
+                <a href="../order/fruitOrder.html"><div><li>Fruit</li></div></a>
+                <a href="../order/vegetableOrder.html"><div><li>Vegetable</li></div></a>
+                <a href="../order/meatOrder.html"><div><li>Meat</li></div></a>
+                <a href="../order/seafoodOrder.html"><div><li>Seafood</li></div></a>
+                <a href="../order/otherOrder.html"><div><li>Other</li></div></a>
             </ul>
         </div>
 
-        <div class="food" id="Pops_Teas">
-                <img class="image" src="../menu/foodImage/Item_Pops_Teas.webp" alt="Image of Pop's Teas">
-                <div class="title">
-                    <h3>Pop's Teas</h3>
-                    <p>&nbsp;</p> 
-                </div>
-                <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>200 Mora</div>
-                </div>
-                <div class="order">
-                    <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Pop\'s_Teas">
-                        <input type="hidden" value="Pop\'s_Teas" name="dish_name">
-                        <input type="submit" value="Add">
-                    </form>
-                </div>
+        <div class="grocery" id="Berry">
+            <img class="image" src="../grocery/groceryImage/Item_Berry.webp" alt="Image of Berry">
+            <div class="title">
+                <h3>Berry</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>150 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Berry">
+                    <input type="hidden" value="Berry" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
         </div>
 
-        <div class="food" id="Water">
-                <img class="image" src="../menu/foodImage/Item_Water.webp" alt="Image of Water">
-                <div class="title">
-                    <h3>Water</h3>
-                    <p>&nbsp;</p> 
-                </div>
-                <div class="text">
-                    <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>Free</div>
-                </div>
-                <div class="order">
-                    <form class="add" action="process.php" method="POST">
-                        <input type="number" min="1" value=1 name="Water">
-                        <input type="hidden" value="Water" name="dish_name">
-                        <input type="submit" value="Add">
-                    </form>
-                </div>
+        <div class="grocery" id="Sunsettia">
+            <img class="image" src="../grocery/groceryImage/Item_Sunsettia.webp" alt="Image of Sunsettia">
+            <div class="title">
+                <h3>Sunsettia</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>170 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Sunsettia">
+                    <input type="hidden" value="Sunsettia" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
         </div>
 
+        <div class="grocery" id="Apple">
+            <img class="image" src="../grocery/groceryImage/Item_Apple.webp" alt="Image of Apple">
+            <div class="title">
+                <h3>Apple</h3>
+            </div>
+            <div class="text">
+                <img class="icon" src="../menu/foodImage/Item_Mora.webp" alt="Mora Symbol"><div>240 Mora</div>
+            </div>
+            <div class="order">
+                <form class="add" action="process.php" method="POST">
+                    <input type="number" min="1" value=1 name="Apple">
+                    <input type="hidden" value="Apple" name="dish_name">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
         
-
+               
         <div id="footer">
             This is a derivative work based on the game Genshin Impact and no commercial usage is allowed.
         </div>
@@ -261,4 +290,5 @@
     </div>
 
 </body>
+
 </html>

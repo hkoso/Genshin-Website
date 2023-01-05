@@ -1,8 +1,8 @@
 <?php
 
-$url = "localhost";
+$url = "db";
 $un = "root";
-$pwd = "";
+$pwd = "MYSQL_ROOT_PASSWORD";
 $db = "onlineordering";
 
 ?>
