@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- 主机： 127.0.0.1
--- 生成日期： 2023-01-04 10:10:30
--- 服务器版本： 10.4.22-MariaDB
--- PHP 版本： 8.1.2
+-- Host: db
+-- Generation Time: Jan 06, 2023 at 10:36 AM
+-- Server version: 8.0.31
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,22 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `onlineordering`
+-- Database: `onlineordering`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `dish_info`
+-- Table structure for table `dish_info`
 --
 
 CREATE TABLE `dish_info` (
   `dish_name` varchar(64) NOT NULL,
-  `price` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `price` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `dish_info`
+-- Dumping data for table `dish_info`
 --
 
 INSERT INTO `dish_info` (`dish_name`, `price`) VALUES
@@ -98,18 +98,18 @@ INSERT INTO `dish_info` (`dish_name`, `price`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order_contact_info`
+-- Table structure for table `order_contact_info`
 --
 
 CREATE TABLE `order_contact_info` (
-  `order_id` int(11) NOT NULL,
+  `order_id` int NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
   `phone_number` char(12) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `order_contact_info`
+-- Dumping data for table `order_contact_info`
 --
 
 INSERT INTO `order_contact_info` (`order_id`, `first_name`, `last_name`, `phone_number`) VALUES
@@ -123,20 +123,20 @@ INSERT INTO `order_contact_info` (`order_id`, `first_name`, `last_name`, `phone_
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order_deliver_address`
+-- Table structure for table `order_deliver_address`
 --
 
 CREATE TABLE `order_deliver_address` (
-  `order_id` int(11) NOT NULL,
-  `suit_number` int(11) NOT NULL,
+  `order_id` int NOT NULL,
+  `suit_number` int NOT NULL,
   `street` varchar(32) NOT NULL,
   `city` varchar(16) NOT NULL,
   `country` varchar(9) NOT NULL,
   `postal_code` char(7) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `order_deliver_address`
+-- Dumping data for table `order_deliver_address`
 --
 
 INSERT INTO `order_deliver_address` (`order_id`, `suit_number`, `street`, `city`, `country`, `postal_code`) VALUES
@@ -145,17 +145,17 @@ INSERT INTO `order_deliver_address` (`order_id`, `suit_number`, `street`, `city`
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order_info`
+-- Table structure for table `order_info`
 --
 
 CREATE TABLE `order_info` (
-  `order_id` int(11) NOT NULL,
+  `order_id` int NOT NULL,
   `dish_name` varchar(64) NOT NULL,
-  `quantity` int(11) DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `quantity` int DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `order_info`
+-- Dumping data for table `order_info`
 --
 
 INSERT INTO `order_info` (`order_id`, `dish_name`, `quantity`) VALUES
@@ -174,16 +174,16 @@ INSERT INTO `order_info` (`order_id`, `dish_name`, `quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `service_mode_info`
+-- Table structure for table `service_mode_info`
 --
 
 CREATE TABLE `service_mode_info` (
-  `service_mode` int(1) NOT NULL,
+  `service_mode` int NOT NULL,
   `sevice` varchar(8) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `service_mode_info`
+-- Dumping data for table `service_mode_info`
 --
 
 INSERT INTO `service_mode_info` (`service_mode`, `sevice`) VALUES
@@ -193,11 +193,11 @@ INSERT INTO `service_mode_info` (`service_mode`, `sevice`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `time_info`
+-- Table structure for table `time_info`
 --
 
 CREATE TABLE `time_info` (
-  `order_id` int(11) NOT NULL,
+  `order_id` int NOT NULL,
   `year` char(4) NOT NULL,
   `month` char(2) NOT NULL,
   `day` char(2) NOT NULL,
@@ -205,10 +205,10 @@ CREATE TABLE `time_info` (
   `minute` char(2) NOT NULL,
   `second` char(2) NOT NULL,
   `meridiem` char(2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `time_info`
+-- Dumping data for table `time_info`
 --
 
 INSERT INTO `time_info` (`order_id`, `year`, `month`, `day`, `hour`, `minute`, `second`, `meridiem`) VALUES
@@ -233,17 +233,17 @@ INSERT INTO `time_info` (`order_id`, `year`, `month`, `day`, `hour`, `minute`, `
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_info`
+-- Table structure for table `user_info`
 --
 
 CREATE TABLE `user_info` (
   `username` varchar(12) DEFAULT NULL,
   `password` varchar(16) DEFAULT NULL,
-  `permission_level` int(1) NOT NULL DEFAULT 1
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `permission_level` int NOT NULL DEFAULT '1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `user_info`
+-- Dumping data for table `user_info`
 --
 
 INSERT INTO `user_info` (`username`, `password`, `permission_level`) VALUES
@@ -253,18 +253,18 @@ INSERT INTO `user_info` (`username`, `password`, `permission_level`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_order`
+-- Table structure for table `user_order`
 --
 
 CREATE TABLE `user_order` (
   `username` varchar(12) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `order_status` int(11) NOT NULL,
-  `service_mode` int(1) NOT NULL DEFAULT -1
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `order_id` int NOT NULL,
+  `order_status` int NOT NULL,
+  `service_mode` int NOT NULL DEFAULT '-1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- 转存表中的数据 `user_order`
+-- Dumping data for table `user_order`
 --
 
 INSERT INTO `user_order` (`username`, `order_id`, `order_status`, `service_mode`) VALUES
@@ -276,54 +276,54 @@ INSERT INTO `user_order` (`username`, `order_id`, `order_status`, `service_mode`
 ('Traveller', 17, -1, -1);
 
 --
--- 转储表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 表的索引 `dish_info`
+-- Indexes for table `dish_info`
 --
 ALTER TABLE `dish_info`
   ADD PRIMARY KEY (`dish_name`);
 
 --
--- 表的索引 `order_contact_info`
+-- Indexes for table `order_contact_info`
 --
 ALTER TABLE `order_contact_info`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- 表的索引 `order_deliver_address`
+-- Indexes for table `order_deliver_address`
 --
 ALTER TABLE `order_deliver_address`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- 表的索引 `time_info`
+-- Indexes for table `time_info`
 --
 ALTER TABLE `time_info`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- 表的索引 `user_info`
+-- Indexes for table `user_info`
 --
 ALTER TABLE `user_info`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- 表的索引 `user_order`
+-- Indexes for table `user_order`
 --
 ALTER TABLE `user_order`
   ADD UNIQUE KEY `order_id` (`order_id`);
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用表AUTO_INCREMENT `user_order`
+-- AUTO_INCREMENT for table `user_order`
 --
 ALTER TABLE `user_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `order_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
