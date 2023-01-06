@@ -23,3 +23,7 @@ How to run the website on your computer:
  Bug to be fixed:
     1. Due to the design of the code, if the user refreshes the website during inputting addresses for their order delivery. 
        An error may occur when they return to the site next time
+       
+Avaliable Account:
+    Username: Traveller
+    Password: 123456
