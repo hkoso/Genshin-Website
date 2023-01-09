@@ -216,6 +216,47 @@
 
 
 <body>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script>
+
+
+
+
+
+        $(document).ready(function() {
+            let submit = document.getElementById("submit");
+            submit.addEventListener("mouseover", checkUserInput);
+        });
+        
+        function checkUserInput() {
+            let username = document.getElementById("username");
+            let password = document.getElementById("password");
+            let confirmPassword = document.getElementById("confirmPassword");
+            let errorMessage = "";
+            if(!(username.value && password.value && confirmPassword.value)){
+                    errorMessage = "Lack of information:\n"; 
+
+                if(!username.value) {
+                    errorMessage += "Username\n";
+                }
+
+                if(!password.value) {
+                    errorMessage += "Password\n";
+                }
+
+                if(!confirmPassword.value) {
+                    errorMessage += "Password confirmation";
+                }
+                alert(errorMessage);
+            }
+            else if(password.value !== confirmPassword.value) {
+                errorMessage = "Password and password confirmation are not the same"
+                alert(errorMessage);
+            }
+
+
+        }
+    </script>
     <div id="display">
 
         <!--Navigation Bar--->
